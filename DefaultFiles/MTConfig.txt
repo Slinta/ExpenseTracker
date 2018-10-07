@@ -1,0 +1,42 @@
+# lines starting with # are ignored
+# configure this to match your spreadsheet or use this preconfigured config with the included spreadsheet
+# Each line represents a piece of data, the data it represents is in order:
+# dataHeadingLine, dataStartLine, Date, Food, Shool, Country, Transport, Fun, ForSomeone, Loss, TAmount, TFrom, TTo, EMethod, EAmount, WWhere, WTime, WHourlyRate, WPaid, MFood, MSchool, MCountry, MTransport, MFun, MSomeone, MLost, MEarnAmount
+# first two only take a number, the others take custom name and then after "," the column letter
+# T represents transfer, E earn, W work, M manager
+# after those you should specify your account identifiers, with this format:
+# accountName,accountIdentifier (Wallet,w)
+31
+32
+Weekday,B
+Date,C 
+Food,D 
+Shool needs,E 
+Country,F
+Transport + car,G 
+For fun, H
+Paying for someone, I 
+Lost, J 
+TAmount, P 
+TFrom, Q
+TTo, R
+EMethod,S 
+EAmount, T
+WWhere, U
+WTime, V
+WHourlyRate, W 
+WPaid, X
+MFood, Y
+MSchool, Z
+MCountry, AA
+MTransport, AB
+MFun, AC
+MSomeone,AD 
+MLost, AF
+MEarnAmount, AE
+Cash, c
+Servis24, s
+Paypal, p
+CashPile, r
+
+
