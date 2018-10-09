@@ -27,6 +27,7 @@
 			this.SelectFileButton = new System.Windows.Forms.Button();
 			this.openXlsxFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.PPriceNUD = new System.Windows.Forms.NumericUpDown();
 			this.PDateC = new System.Windows.Forms.MonthCalendar();
 			this.PCommentLabel = new System.Windows.Forms.Label();
 			this.PAccountLabel = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
 			this.PCommentRTB = new System.Windows.Forms.RichTextBox();
 			this.PTitleL = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.TAmountNUD = new System.Windows.Forms.NumericUpDown();
 			this.TCalendar = new System.Windows.Forms.MonthCalendar();
 			this.TCommentLabel = new System.Windows.Forms.Label();
 			this.TToLabel = new System.Windows.Forms.Label();
@@ -48,6 +50,7 @@
 			this.TTitleL = new System.Windows.Forms.Label();
 			this.TConfirmB = new System.Windows.Forms.Button();
 			this.panel3 = new System.Windows.Forms.Panel();
+			this.EAmountNUD = new System.Windows.Forms.NumericUpDown();
 			this.EDescriptionTB = new System.Windows.Forms.TextBox();
 			this.ECalendar = new System.Windows.Forms.MonthCalendar();
 			this.ECommentLabel = new System.Windows.Forms.Label();
@@ -59,6 +62,9 @@
 			this.ETitleL = new System.Windows.Forms.Label();
 			this.EConfirmB = new System.Windows.Forms.Button();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.WHourlyRateL = new System.Windows.Forms.Label();
+			this.WHourlyRateNUD = new System.Windows.Forms.NumericUpDown();
+			this.WHoursNUD = new System.Windows.Forms.NumericUpDown();
 			this.WLabelTB = new System.Windows.Forms.TextBox();
 			this.WCalendar = new System.Windows.Forms.MonthCalendar();
 			this.WCommentL = new System.Windows.Forms.Label();
@@ -67,27 +73,21 @@
 			this.WCommentRTB = new System.Windows.Forms.RichTextBox();
 			this.WTitleL = new System.Windows.Forms.Label();
 			this.WConfirmB = new System.Windows.Forms.Button();
-			this.PPriceNUD = new System.Windows.Forms.NumericUpDown();
-			this.TAmountNUD = new System.Windows.Forms.NumericUpDown();
-			this.EAmountNUD = new System.Windows.Forms.NumericUpDown();
-			this.WHoursNUD = new System.Windows.Forms.NumericUpDown();
-			this.WHourlyRateNUD = new System.Windows.Forms.NumericUpDown();
-			this.WHourlyRateL = new System.Windows.Forms.Label();
 			this.panel1.SuspendLayout();
-			this.panel2.SuspendLayout();
-			this.panel3.SuspendLayout();
-			this.panel4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.PPriceNUD)).BeginInit();
+			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.TAmountNUD)).BeginInit();
+			this.panel3.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.EAmountNUD)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.WHoursNUD)).BeginInit();
+			this.panel4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.WHourlyRateNUD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.WHoursNUD)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// PConfirmB
 			// 
 			this.PConfirmB.Enabled = false;
-			this.PConfirmB.Location = new System.Drawing.Point(563, 161);
+			this.PConfirmB.Location = new System.Drawing.Point(700, 161);
 			this.PConfirmB.Name = "PConfirmB";
 			this.PConfirmB.Size = new System.Drawing.Size(75, 23);
 			this.PConfirmB.TabIndex = 0;
@@ -126,8 +126,21 @@
 			this.panel1.Controls.Add(this.PConfirmB);
 			this.panel1.Location = new System.Drawing.Point(12, 41);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(641, 190);
+			this.panel1.Size = new System.Drawing.Size(781, 190);
 			this.panel1.TabIndex = 2;
+			// 
+			// PPriceNUD
+			// 
+			this.PPriceNUD.DecimalPlaces = 2;
+			this.PPriceNUD.Location = new System.Drawing.Point(282, 95);
+			this.PPriceNUD.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+			this.PPriceNUD.Name = "PPriceNUD";
+			this.PPriceNUD.Size = new System.Drawing.Size(120, 20);
+			this.PPriceNUD.TabIndex = 11;
 			// 
 			// PDateC
 			// 
@@ -139,7 +152,7 @@
 			// PCommentLabel
 			// 
 			this.PCommentLabel.AutoSize = true;
-			this.PCommentLabel.Location = new System.Drawing.Point(298, 22);
+			this.PCommentLabel.Location = new System.Drawing.Point(435, 22);
 			this.PCommentLabel.Name = "PCommentLabel";
 			this.PCommentLabel.Size = new System.Drawing.Size(51, 13);
 			this.PCommentLabel.TabIndex = 9;
@@ -148,7 +161,7 @@
 			// PAccountLabel
 			// 
 			this.PAccountLabel.AutoSize = true;
-			this.PAccountLabel.Location = new System.Drawing.Point(168, 101);
+			this.PAccountLabel.Location = new System.Drawing.Point(282, 118);
 			this.PAccountLabel.Name = "PAccountLabel";
 			this.PAccountLabel.Size = new System.Drawing.Size(47, 13);
 			this.PAccountLabel.TabIndex = 8;
@@ -157,7 +170,7 @@
 			// PAmountLabel
 			// 
 			this.PAmountLabel.AutoSize = true;
-			this.PAmountLabel.Location = new System.Drawing.Point(168, 62);
+			this.PAmountLabel.Location = new System.Drawing.Point(282, 79);
 			this.PAmountLabel.Name = "PAmountLabel";
 			this.PAmountLabel.Size = new System.Drawing.Size(31, 13);
 			this.PAmountLabel.TabIndex = 7;
@@ -166,7 +179,7 @@
 			// PTypeLabel
 			// 
 			this.PTypeLabel.AutoSize = true;
-			this.PTypeLabel.Location = new System.Drawing.Point(168, 22);
+			this.PTypeLabel.Location = new System.Drawing.Point(282, 39);
 			this.PTypeLabel.Name = "PTypeLabel";
 			this.PTypeLabel.Size = new System.Drawing.Size(75, 13);
 			this.PTypeLabel.TabIndex = 6;
@@ -175,7 +188,7 @@
 			// PAccountCB
 			// 
 			this.PAccountCB.FormattingEnabled = true;
-			this.PAccountCB.Location = new System.Drawing.Point(168, 117);
+			this.PAccountCB.Location = new System.Drawing.Point(282, 134);
 			this.PAccountCB.Name = "PAccountCB";
 			this.PAccountCB.Size = new System.Drawing.Size(121, 21);
 			this.PAccountCB.TabIndex = 4;
@@ -183,14 +196,14 @@
 			// PTypeCB
 			// 
 			this.PTypeCB.FormattingEnabled = true;
-			this.PTypeCB.Location = new System.Drawing.Point(171, 38);
+			this.PTypeCB.Location = new System.Drawing.Point(285, 55);
 			this.PTypeCB.Name = "PTypeCB";
 			this.PTypeCB.Size = new System.Drawing.Size(121, 21);
 			this.PTypeCB.TabIndex = 3;
 			// 
 			// PCommentRTB
 			// 
-			this.PCommentRTB.Location = new System.Drawing.Point(295, 38);
+			this.PCommentRTB.Location = new System.Drawing.Point(432, 38);
 			this.PCommentRTB.Name = "PCommentRTB";
 			this.PCommentRTB.Size = new System.Drawing.Size(262, 138);
 			this.PCommentRTB.TabIndex = 2;
@@ -221,12 +234,25 @@
 			this.panel2.Controls.Add(this.TConfirmB);
 			this.panel2.Location = new System.Drawing.Point(12, 237);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(641, 190);
+			this.panel2.Size = new System.Drawing.Size(781, 190);
 			this.panel2.TabIndex = 11;
+			// 
+			// TAmountNUD
+			// 
+			this.TAmountNUD.DecimalPlaces = 2;
+			this.TAmountNUD.Location = new System.Drawing.Point(283, 161);
+			this.TAmountNUD.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+			this.TAmountNUD.Name = "TAmountNUD";
+			this.TAmountNUD.Size = new System.Drawing.Size(120, 20);
+			this.TAmountNUD.TabIndex = 12;
 			// 
 			// TCalendar
 			// 
-			this.TCalendar.Location = new System.Drawing.Point(6, 22);
+			this.TCalendar.Location = new System.Drawing.Point(6, 25);
 			this.TCalendar.MaxSelectionCount = 1;
 			this.TCalendar.Name = "TCalendar";
 			this.TCalendar.TabIndex = 10;
@@ -234,7 +260,7 @@
 			// TCommentLabel
 			// 
 			this.TCommentLabel.AutoSize = true;
-			this.TCommentLabel.Location = new System.Drawing.Point(298, 22);
+			this.TCommentLabel.Location = new System.Drawing.Point(435, 22);
 			this.TCommentLabel.Name = "TCommentLabel";
 			this.TCommentLabel.Size = new System.Drawing.Size(51, 13);
 			this.TCommentLabel.TabIndex = 9;
@@ -243,7 +269,7 @@
 			// TToLabel
 			// 
 			this.TToLabel.AutoSize = true;
-			this.TToLabel.Location = new System.Drawing.Point(168, 62);
+			this.TToLabel.Location = new System.Drawing.Point(280, 67);
 			this.TToLabel.Name = "TToLabel";
 			this.TToLabel.Size = new System.Drawing.Size(59, 13);
 			this.TToLabel.TabIndex = 8;
@@ -252,7 +278,7 @@
 			// TAmountLabel
 			// 
 			this.TAmountLabel.AutoSize = true;
-			this.TAmountLabel.Location = new System.Drawing.Point(168, 141);
+			this.TAmountLabel.Location = new System.Drawing.Point(280, 146);
 			this.TAmountLabel.Name = "TAmountLabel";
 			this.TAmountLabel.Size = new System.Drawing.Size(43, 13);
 			this.TAmountLabel.TabIndex = 7;
@@ -261,7 +287,7 @@
 			// TFromLabel
 			// 
 			this.TFromLabel.AutoSize = true;
-			this.TFromLabel.Location = new System.Drawing.Point(165, 22);
+			this.TFromLabel.Location = new System.Drawing.Point(277, 27);
 			this.TFromLabel.Name = "TFromLabel";
 			this.TFromLabel.Size = new System.Drawing.Size(70, 13);
 			this.TFromLabel.TabIndex = 6;
@@ -270,7 +296,7 @@
 			// TToCB
 			// 
 			this.TToCB.FormattingEnabled = true;
-			this.TToCB.Location = new System.Drawing.Point(168, 78);
+			this.TToCB.Location = new System.Drawing.Point(280, 83);
 			this.TToCB.Name = "TToCB";
 			this.TToCB.Size = new System.Drawing.Size(121, 21);
 			this.TToCB.TabIndex = 4;
@@ -278,14 +304,14 @@
 			// TFromCB
 			// 
 			this.TFromCB.FormattingEnabled = true;
-			this.TFromCB.Location = new System.Drawing.Point(168, 38);
+			this.TFromCB.Location = new System.Drawing.Point(280, 43);
 			this.TFromCB.Name = "TFromCB";
 			this.TFromCB.Size = new System.Drawing.Size(121, 21);
 			this.TFromCB.TabIndex = 3;
 			// 
 			// TCommentRTB
 			// 
-			this.TCommentRTB.Location = new System.Drawing.Point(295, 38);
+			this.TCommentRTB.Location = new System.Drawing.Point(432, 38);
 			this.TCommentRTB.Name = "TCommentRTB";
 			this.TCommentRTB.Size = new System.Drawing.Size(262, 138);
 			this.TCommentRTB.TabIndex = 2;
@@ -303,7 +329,7 @@
 			// TConfirmB
 			// 
 			this.TConfirmB.Enabled = false;
-			this.TConfirmB.Location = new System.Drawing.Point(563, 161);
+			this.TConfirmB.Location = new System.Drawing.Point(703, 161);
 			this.TConfirmB.Name = "TConfirmB";
 			this.TConfirmB.Size = new System.Drawing.Size(75, 23);
 			this.TConfirmB.TabIndex = 0;
@@ -327,19 +353,32 @@
 			this.panel3.Controls.Add(this.EConfirmB);
 			this.panel3.Location = new System.Drawing.Point(9, 433);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(641, 190);
+			this.panel3.Size = new System.Drawing.Size(784, 190);
 			this.panel3.TabIndex = 12;
+			// 
+			// EAmountNUD
+			// 
+			this.EAmountNUD.DecimalPlaces = 2;
+			this.EAmountNUD.Location = new System.Drawing.Point(289, 142);
+			this.EAmountNUD.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+			this.EAmountNUD.Name = "EAmountNUD";
+			this.EAmountNUD.Size = new System.Drawing.Size(120, 20);
+			this.EAmountNUD.TabIndex = 13;
 			// 
 			// EDescriptionTB
 			// 
-			this.EDescriptionTB.Location = new System.Drawing.Point(168, 78);
+			this.EDescriptionTB.Location = new System.Drawing.Point(288, 103);
 			this.EDescriptionTB.Name = "EDescriptionTB";
 			this.EDescriptionTB.Size = new System.Drawing.Size(100, 20);
 			this.EDescriptionTB.TabIndex = 11;
 			// 
 			// ECalendar
 			// 
-			this.ECalendar.Location = new System.Drawing.Point(6, 22);
+			this.ECalendar.Location = new System.Drawing.Point(9, 22);
 			this.ECalendar.MaxSelectionCount = 1;
 			this.ECalendar.Name = "ECalendar";
 			this.ECalendar.TabIndex = 10;
@@ -347,7 +386,7 @@
 			// ECommentLabel
 			// 
 			this.ECommentLabel.AutoSize = true;
-			this.ECommentLabel.Location = new System.Drawing.Point(298, 22);
+			this.ECommentLabel.Location = new System.Drawing.Point(438, 22);
 			this.ECommentLabel.Name = "ECommentLabel";
 			this.ECommentLabel.Size = new System.Drawing.Size(51, 13);
 			this.ECommentLabel.TabIndex = 9;
@@ -356,7 +395,7 @@
 			// EDescriptionL
 			// 
 			this.EDescriptionL.AutoSize = true;
-			this.EDescriptionL.Location = new System.Drawing.Point(168, 62);
+			this.EDescriptionL.Location = new System.Drawing.Point(288, 87);
 			this.EDescriptionL.Name = "EDescriptionL";
 			this.EDescriptionL.Size = new System.Drawing.Size(33, 13);
 			this.EDescriptionL.TabIndex = 8;
@@ -365,7 +404,7 @@
 			// EAmountL
 			// 
 			this.EAmountL.AutoSize = true;
-			this.EAmountL.Location = new System.Drawing.Point(171, 101);
+			this.EAmountL.Location = new System.Drawing.Point(291, 126);
 			this.EAmountL.Name = "EAmountL";
 			this.EAmountL.Size = new System.Drawing.Size(43, 13);
 			this.EAmountL.TabIndex = 7;
@@ -374,7 +413,7 @@
 			// EAccountL
 			// 
 			this.EAccountL.AutoSize = true;
-			this.EAccountL.Location = new System.Drawing.Point(171, 22);
+			this.EAccountL.Location = new System.Drawing.Point(291, 47);
 			this.EAccountL.Name = "EAccountL";
 			this.EAccountL.Size = new System.Drawing.Size(47, 13);
 			this.EAccountL.TabIndex = 6;
@@ -383,14 +422,14 @@
 			// EAccountCB
 			// 
 			this.EAccountCB.FormattingEnabled = true;
-			this.EAccountCB.Location = new System.Drawing.Point(168, 38);
+			this.EAccountCB.Location = new System.Drawing.Point(288, 63);
 			this.EAccountCB.Name = "EAccountCB";
 			this.EAccountCB.Size = new System.Drawing.Size(121, 21);
 			this.EAccountCB.TabIndex = 3;
 			// 
 			// ECommentRTB
 			// 
-			this.ECommentRTB.Location = new System.Drawing.Point(295, 38);
+			this.ECommentRTB.Location = new System.Drawing.Point(435, 38);
 			this.ECommentRTB.Name = "ECommentRTB";
 			this.ECommentRTB.Size = new System.Drawing.Size(262, 138);
 			this.ECommentRTB.TabIndex = 2;
@@ -408,7 +447,7 @@
 			// EConfirmB
 			// 
 			this.EConfirmB.Enabled = false;
-			this.EConfirmB.Location = new System.Drawing.Point(563, 161);
+			this.EConfirmB.Location = new System.Drawing.Point(706, 161);
 			this.EConfirmB.Name = "EConfirmB";
 			this.EConfirmB.Size = new System.Drawing.Size(75, 23);
 			this.EConfirmB.TabIndex = 0;
@@ -432,19 +471,58 @@
 			this.panel4.Controls.Add(this.WConfirmB);
 			this.panel4.Location = new System.Drawing.Point(9, 629);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(641, 190);
+			this.panel4.Size = new System.Drawing.Size(784, 190);
 			this.panel4.TabIndex = 13;
+			// 
+			// WHourlyRateL
+			// 
+			this.WHourlyRateL.AutoSize = true;
+			this.WHourlyRateL.Location = new System.Drawing.Point(286, 86);
+			this.WHourlyRateL.Name = "WHourlyRateL";
+			this.WHourlyRateL.Size = new System.Drawing.Size(60, 13);
+			this.WHourlyRateL.TabIndex = 16;
+			this.WHourlyRateL.Text = "HourlyRate";
+			// 
+			// WHourlyRateNUD
+			// 
+			this.WHourlyRateNUD.Location = new System.Drawing.Point(288, 102);
+			this.WHourlyRateNUD.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+			this.WHourlyRateNUD.Name = "WHourlyRateNUD";
+			this.WHourlyRateNUD.Size = new System.Drawing.Size(120, 20);
+			this.WHourlyRateNUD.TabIndex = 14;
+			this.WHourlyRateNUD.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+			// 
+			// WHoursNUD
+			// 
+			this.WHoursNUD.DecimalPlaces = 2;
+			this.WHoursNUD.Location = new System.Drawing.Point(288, 153);
+			this.WHoursNUD.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+			this.WHoursNUD.Name = "WHoursNUD";
+			this.WHoursNUD.Size = new System.Drawing.Size(120, 20);
+			this.WHoursNUD.TabIndex = 13;
 			// 
 			// WLabelTB
 			// 
-			this.WLabelTB.Location = new System.Drawing.Point(168, 38);
+			this.WLabelTB.Location = new System.Drawing.Point(288, 46);
 			this.WLabelTB.Name = "WLabelTB";
 			this.WLabelTB.Size = new System.Drawing.Size(100, 20);
 			this.WLabelTB.TabIndex = 11;
 			// 
 			// WCalendar
 			// 
-			this.WCalendar.Location = new System.Drawing.Point(6, 22);
+			this.WCalendar.Location = new System.Drawing.Point(9, 18);
 			this.WCalendar.MaxSelectionCount = 1;
 			this.WCalendar.Name = "WCalendar";
 			this.WCalendar.TabIndex = 10;
@@ -452,7 +530,7 @@
 			// WCommentL
 			// 
 			this.WCommentL.AutoSize = true;
-			this.WCommentL.Location = new System.Drawing.Point(298, 22);
+			this.WCommentL.Location = new System.Drawing.Point(438, 30);
 			this.WCommentL.Name = "WCommentL";
 			this.WCommentL.Size = new System.Drawing.Size(51, 13);
 			this.WCommentL.TabIndex = 9;
@@ -461,7 +539,7 @@
 			// WLabelL
 			// 
 			this.WLabelL.AutoSize = true;
-			this.WLabelL.Location = new System.Drawing.Point(165, 22);
+			this.WLabelL.Location = new System.Drawing.Point(285, 30);
 			this.WLabelL.Name = "WLabelL";
 			this.WLabelL.Size = new System.Drawing.Size(33, 13);
 			this.WLabelL.TabIndex = 8;
@@ -470,7 +548,7 @@
 			// WHoursL
 			// 
 			this.WHoursL.AutoSize = true;
-			this.WHoursL.Location = new System.Drawing.Point(166, 129);
+			this.WHoursL.Location = new System.Drawing.Point(286, 137);
 			this.WHoursL.Name = "WHoursL";
 			this.WHoursL.Size = new System.Drawing.Size(35, 13);
 			this.WHoursL.TabIndex = 7;
@@ -478,7 +556,7 @@
 			// 
 			// WCommentRTB
 			// 
-			this.WCommentRTB.Location = new System.Drawing.Point(295, 38);
+			this.WCommentRTB.Location = new System.Drawing.Point(435, 46);
 			this.WCommentRTB.Name = "WCommentRTB";
 			this.WCommentRTB.Size = new System.Drawing.Size(262, 138);
 			this.WCommentRTB.TabIndex = 2;
@@ -496,7 +574,7 @@
 			// WConfirmB
 			// 
 			this.WConfirmB.Enabled = false;
-			this.WConfirmB.Location = new System.Drawing.Point(563, 161);
+			this.WConfirmB.Location = new System.Drawing.Point(703, 161);
 			this.WConfirmB.Name = "WConfirmB";
 			this.WConfirmB.Size = new System.Drawing.Size(75, 23);
 			this.WConfirmB.TabIndex = 0;
@@ -504,89 +582,11 @@
 			this.WConfirmB.UseVisualStyleBackColor = true;
 			this.WConfirmB.Click += new System.EventHandler(this.WConfirmB_Click);
 			// 
-			// PPriceNUD
-			// 
-			this.PPriceNUD.DecimalPlaces = 2;
-			this.PPriceNUD.Location = new System.Drawing.Point(168, 78);
-			this.PPriceNUD.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-			this.PPriceNUD.Name = "PPriceNUD";
-			this.PPriceNUD.Size = new System.Drawing.Size(120, 20);
-			this.PPriceNUD.TabIndex = 11;
-			// 
-			// TAmountNUD
-			// 
-			this.TAmountNUD.DecimalPlaces = 2;
-			this.TAmountNUD.Location = new System.Drawing.Point(171, 156);
-			this.TAmountNUD.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-			this.TAmountNUD.Name = "TAmountNUD";
-			this.TAmountNUD.Size = new System.Drawing.Size(120, 20);
-			this.TAmountNUD.TabIndex = 12;
-			// 
-			// EAmountNUD
-			// 
-			this.EAmountNUD.DecimalPlaces = 2;
-			this.EAmountNUD.Location = new System.Drawing.Point(169, 117);
-			this.EAmountNUD.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-			this.EAmountNUD.Name = "EAmountNUD";
-			this.EAmountNUD.Size = new System.Drawing.Size(120, 20);
-			this.EAmountNUD.TabIndex = 13;
-			// 
-			// WHoursNUD
-			// 
-			this.WHoursNUD.DecimalPlaces = 2;
-			this.WHoursNUD.Location = new System.Drawing.Point(168, 145);
-			this.WHoursNUD.Maximum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-			this.WHoursNUD.Name = "WHoursNUD";
-			this.WHoursNUD.Size = new System.Drawing.Size(120, 20);
-			this.WHoursNUD.TabIndex = 13;
-			// 
-			// WHourlyRateNUD
-			// 
-			this.WHourlyRateNUD.Location = new System.Drawing.Point(168, 94);
-			this.WHourlyRateNUD.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-			this.WHourlyRateNUD.Name = "WHourlyRateNUD";
-			this.WHourlyRateNUD.Size = new System.Drawing.Size(120, 20);
-			this.WHourlyRateNUD.TabIndex = 14;
-			this.WHourlyRateNUD.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-			// 
-			// WHourlyRateL
-			// 
-			this.WHourlyRateL.AutoSize = true;
-			this.WHourlyRateL.Location = new System.Drawing.Point(166, 78);
-			this.WHourlyRateL.Name = "WHourlyRateL";
-			this.WHourlyRateL.Size = new System.Drawing.Size(60, 13);
-			this.WHourlyRateL.TabIndex = 16;
-			this.WHourlyRateL.Text = "HourlyRate";
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(665, 827);
+			this.ClientSize = new System.Drawing.Size(802, 827);
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel2);
@@ -596,17 +596,17 @@
 			this.Text = "Form1";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.PPriceNUD)).EndInit();
 			this.panel2.ResumeLayout(false);
 			this.panel2.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.TAmountNUD)).EndInit();
 			this.panel3.ResumeLayout(false);
 			this.panel3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.EAmountNUD)).EndInit();
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.PPriceNUD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.TAmountNUD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.EAmountNUD)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.WHoursNUD)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.WHourlyRateNUD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.WHoursNUD)).EndInit();
 			this.ResumeLayout(false);
 
 		}
